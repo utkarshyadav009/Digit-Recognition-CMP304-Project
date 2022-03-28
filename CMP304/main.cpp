@@ -90,7 +90,7 @@ int main()
     float accuracy = ((float)numCorrect / numTests * 100.0f);
     printf("Accuracy: %f%%\n", accuracy);
     printf("Number of Layers in the NeuralNetwork model: %zu\n", model.NumberOfLayers());
-
+    printf("Left Mouse Click Drag on the window to draw a digit between 0-9\nEnter to evaluate your input\n C to clear the input\n ESC to quit\n")
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(280, 280), "Handwriting Recognition");
     sf::VertexArray pointmap(sf::Points, 280 * 280);
