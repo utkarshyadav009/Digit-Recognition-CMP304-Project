@@ -43,7 +43,6 @@ int main()
 
     printf("Training the Network...\n");
 
-    printf("Number Examples: %i\n", NumExamples);
     for (unsigned int epoch = 0; epoch < NumEpoch; epoch++)
     {
         for (unsigned int i = 0; i < NumExamples; i++)
