@@ -17,7 +17,9 @@ int main()
 {
     MNISTModel model;
     printf("Loading MNIST dataset in.....\n");
+
     std::vector<std::vector<float> > TrainingData = LoadMNIST();
+
     printf("Dataset Loaded...\n");
 
     //create labels
@@ -55,11 +57,11 @@ int main()
                 for (int k = i * InputSize; k < i * InputSize + InputSize; k++)
                     input.push_back(TrainingData[j][k]);
 
-                float loss = model.Train(input, labels[j], LearningRate / pow(10, epoch / 10.0f));
+                float cost = model.Train(input, labels[j], LearningRate / pow(10, epoch / 10.0f));
 
                 //train the model
                 if (i % 100 == 0)
-                    std::cout << "Epoch " << epoch + 1 << ", loss: " << loss << std::endl;
+                    std::cout << "Epoch " << epoch + 1 << ", cost: " << cost << std::endl;
             }
         }
 
