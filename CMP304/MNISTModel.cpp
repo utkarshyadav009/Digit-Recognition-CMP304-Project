@@ -92,13 +92,6 @@ void MNISTModel::AddSoftmax(unsigned int inputSize)
 	Layers.push_back(layer);
 }
 
-void MNISTModel::AddSigmoid(unsigned int inputSize)
-{
-	SigmoidActivation* sigmoid = new SigmoidActivation(inputSize);
-	Layer* layer = sigmoid;
-	Layers.push_back(layer);
-}
-
 size_t MNISTModel::NumberOfLayers()
 {
 	return Layers.size();

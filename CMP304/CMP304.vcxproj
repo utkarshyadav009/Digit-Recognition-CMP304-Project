@@ -152,19 +152,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Layer.cpp" />
-    <ClCompile Include="LoadMNIST.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MNISTModel.cpp" />
     <ClCompile Include="Network.cpp" />
-    <ClCompile Include="SigmoidActivation.cpp" />
     <ClCompile Include="SoftmaxActivation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Layer.h" />
-    <ClInclude Include="LoadMNIST.h" />
     <ClInclude Include="MNISTModel.h" />
     <ClInclude Include="Network.h" />
-    <ClInclude Include="SigmoidActivation.h" />
     <ClInclude Include="SoftmaxActivation.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>

@@ -45,7 +45,7 @@ void Network::Forward()
 		unsigned int iSize = Input.size();
 		unsigned int oSize = Output.size();
 
-		//weight calculations 
+		// calculating the output using weights 
 		for (unsigned int i = 0; i < iSize; i++)
 		{
 			for (unsigned int j = 0; j < OutputSize; j++)
@@ -57,7 +57,7 @@ void Network::Forward()
 			}
 		}
 
-		//Bias calculations 
+		//adding the bias 
 		for (unsigned int i = 0; i < oSize; i++)
 		{
 			Output[i] += Bias[i % OutputSize];
@@ -75,7 +75,7 @@ void Network::CalcDeltas(std::vector<float> nextLayerDeltas)
 	//reducing function calls 
 	unsigned int iSize = Input.size();
 
-	//weight calculation 
+	//delta calculation 
 	for (unsigned int i = 0; i < iSize; i++)
 	{
 		for (unsigned int j = 0; j < OutputSize; j++)

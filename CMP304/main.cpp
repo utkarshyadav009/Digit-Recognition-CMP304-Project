@@ -6,7 +6,6 @@
 #include <cstdlib>
 
 #include "MNISTModel.h"
-#include "LoadMNIST.h"
 #include "Utils.h"
 
 
@@ -92,16 +91,19 @@ int main()
     printf("Accuracy: %f%%\n", accuracy);
     printf("Number of Layers in the NeuralNetwork model: %zu\n", model.NumberOfLayers());
     printf("\n\n\nClick Left Mouse button and Drag on the window to draw a digit between 0-9\nEnter to evaluate your input\nC to clear the input\nESC to quit\n");
+    
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(280, 280), "Handwriting Recognition");
     sf::VertexArray pointmap(sf::Points, 280 * 280);
     for (int i = 0; i < 280; i++)
+    {
         for (int j = 0; j < 280; j++)
         {
             pointmap[i * 280 + j].position.x = j;
             pointmap[i * 280 + j].position.y = i;
             pointmap[i * 280 + j].color = sf::Color::Black;
         }
+    }
 
     // Start the game loop
     while (window.isOpen())
@@ -148,13 +150,14 @@ int main()
                 }
             }
         }
-
+        //press c to clear the window 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::C))
         {
             for (int i = 0; i < 280 * 280; i++)
                 pointmap[i].color = sf::Color::Black;
         }
 
+        //enter to send data for evaluation 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Return))
         {
             std::vector<float> input;

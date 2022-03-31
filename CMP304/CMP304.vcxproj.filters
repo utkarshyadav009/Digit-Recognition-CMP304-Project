@@ -24,16 +24,10 @@
     <ClCompile Include="SoftmaxActivation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SigmoidActivation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Layer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Network.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LoadMNIST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,16 +38,10 @@
     <ClInclude Include="SoftmaxActivation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SigmoidActivation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Layer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Network.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LoadMNIST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Utils.h">
