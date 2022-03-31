@@ -55,12 +55,12 @@ float MNISTModel::Train(std::vector<float> input, std::vector<float> output, flo
 	//calculate the last layer deltas 
 	std::vector<float> lastLayerDeltas;
 	lastLayerDeltas.resize(modelOutput.size());
-	float loss = 0.0f;
+	float cost = 0.0f;
 
 	for (unsigned int i = 0; i < lastLayerDeltas.size(); i++)
 	{
 		lastLayerDeltas[i] = modelOutput[i] - output[i % oSize];
-		loss += lastLayerDeltas[i] * lastLayerDeltas[i] / 2;
+		cost += lastLayerDeltas[i] * lastLayerDeltas[i] / 2;
 	}
 
 	//calculate layer deltas
@@ -75,7 +75,7 @@ float MNISTModel::Train(std::vector<float> input, std::vector<float> output, flo
 	{
 		Layers[i]->UpdateParams(learningRate);
 	}
-	return loss;
+	return cost;
 }
 
 void MNISTModel::AddNetwork(unsigned int inputSize, unsigned int outputSize)

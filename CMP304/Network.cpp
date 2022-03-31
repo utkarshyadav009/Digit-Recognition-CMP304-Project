@@ -13,14 +13,14 @@ Network::Network(unsigned int inputSize, unsigned int outputSize)
 	Weight.resize(InputSize * OutputSize);
 	for (unsigned int i = 0; i < InputSize * OutputSize; i++)
 	{
-		Weight[i] = (rand() % 1000) / 100000.0f;
+		Weight[i] = (rand() % 10) / 1000.0f;
 	}
 
 	//setting random biases for the output 
 	Bias.resize(OutputSize);
 	for (unsigned int i = 0; i < OutputSize; i++)
 	{
-		Bias[i] = (rand() % 1000) / 100000.0f;
+		Bias[i] = (rand() % 10) / 1000.0f;
 	}
 }
 

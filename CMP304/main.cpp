@@ -179,8 +179,7 @@ int main()
                     input.push_back(average);
                 }
             }
-            {
-                std::vector<float> output = model.Evaluate(input);
+            {   std::vector<float> output = model.Evaluate(input);
                 int prediction = MaxElement(output);
                 printf("This number is predicted to be a: %i \n\n", prediction);
             }
